@@ -1,0 +1,35 @@
+@baseURL = http://localhost:5001/api/v1
+
+# @name Register
+POST {{baseURL}}/auth/register
+Content-Type: application/json
+
+{
+    "name": "minh toan3",
+    "email": "minhtoan3@gmail.com",
+    "password": "242112"
+}
+
+###
+
+# @name Login
+POST {{baseURL}}/auth/login
+Content-Type: application/json
+
+{
+    "email": "minhtoan2@gmail.com",
+    "password": "242112"
+}
+
+###
+
+# @name GetCurrentUser
+GET {{baseURL}}/auth/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTYxYTFkZjMyMmQ2ZTkxMzliMjYzYjkiLCJpYXQiOjE2MzUzMDEzMzF9.Kbo-YzMpzjM7XT2ur3J4EONSvHT4l6Wei3ZJxeGyFBM
+
+###
+
+# @name GetAllUser
+GET {{baseURL}}/users
+
+

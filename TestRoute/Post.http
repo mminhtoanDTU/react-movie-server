@@ -1,0 +1,35 @@
+@baseURL = http://localhost:5001/api/v1
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTYxYTFkZjMyMmQ2ZTkxMzliMjYzYjkiLCJpYXQiOjE2MzU2NDc2MTB9.stMOytSTcljfjkkDH2CXbVk4uMzNbuzyFp8ZEa2OPng
+@postId = 617e0098dee886bd528c3925
+
+# @name GetAllPost
+GET {{baseURL}}/posts
+
+###
+
+# @name CreatePost
+POST {{baseURL}}/posts
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "content": "hi , Test"
+}
+
+###
+
+# @name UpdatePost
+PUT {{baseURL}}/posts/{{postId}}
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "content": "Lisa ah Id love you 😍"
+}
+
+###
+
+
+# @name DeletePost
+DELETE {{baseURL}}/posts/{{postId}}
+Authorization: Bearer {{token}}
