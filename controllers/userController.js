@@ -32,9 +32,20 @@ export const getUserWithPosts = async (req, res) => {
 export const updateUser = async (req, res) => {
     try {
         const { userId } = req.params;
-        const user = await UserModal.findByIdAndUpdate(userId, { ...req.body });
+        const user = await UserModel.findByIdAndUpdate(
+            userId,
+            { ...req.body },
+            {
+                new: true,
+                runValidators: true
+            }
+        );
 
+        res.status(200).json({
+            status: 'success',
+            data: { user }
+        })
     } catch (err) {
-
+        next(error);
     }
-}
+};

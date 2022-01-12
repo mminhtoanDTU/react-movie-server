@@ -33,3 +33,17 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTYxY
 GET {{baseURL}}/users
 
 
+
+###
+
+# @name UpdateUser
+PUT {{baseURL}}/users/6190a756d4bd13797a7cec29
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTkwYTc1NmQ0YmQxMzc5N2E3Y2VjMjkiLCJpYXQiOjE2MzY4Njk5NzR9.IxDWnXEKZBt2mAmVrI1qC_djC-FHtbPQ41EgTjOHX8M
+
+{
+    "name" : "Ong Toan 1"
+}
+
+
+
